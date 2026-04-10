@@ -42,7 +42,7 @@ function Navbar() {
         {/* Logo — left-anchored */}
         <a href="#home" onClick={(e) => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }) }}
           className="flex shrink-0 items-center" aria-label="Home">
-          <img src="/favicon.svg" alt="Logo" className="h-7 w-auto" />
+          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Logo" className="h-7 w-auto" />
         </a>
 
         {/* Nav links — absolutely centered in the full bar */}

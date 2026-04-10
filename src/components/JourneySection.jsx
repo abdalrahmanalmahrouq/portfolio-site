@@ -8,14 +8,14 @@ const timelineItems = [
     type: 'work',
     icon: Briefcase,
     nodeIdx: 1,
-    role: 'Academic Member',
-    org: 'ITZONE PLUS Volunteer Team',
-    period: '2023 – 2024',
+    role: 'AI Intern',
+    org: 'Prime Gate, Riyadh, Saudi Arabia',
+    period: 'Feb 2026 – Apr 2026',
     bullets: [
-      'Assisted students with educational resources across multiple technical subjects.',
-      'Organised study sessions to support collaborative and self-directed learning.',
+      'Conducted targeted research and technical reviews of modern AI frameworks, with a focus on LLM mechanics, LangChain, prompt engineering, and autonomous agents.',
+      'Explored workflow automation and complex API integration strategies with n8n while monitoring LLM API usage, performance, and routing through platforms such as OpenRouter.',
     ],
-    tags: ['Mentoring', 'Education', 'Volunteering'],
+    tags: ['LLMs', 'LangChain', 'n8n', 'OpenRouter'],
   },
   {
     type: 'education',
@@ -29,6 +29,19 @@ const timelineItems = [
       'GPA: 3.71 / 4.00',
     ],
     tags: ['GPA 3.71', 'CIS', 'Hashemite University'],
+  },
+  {
+    type: 'work',
+    icon: Briefcase,
+    nodeIdx: 1,
+    role: 'Academic Member',
+    org: 'ITZONE PLUS Volunteer Team',
+    period: '2023 – 2024',
+    bullets: [
+      'Assisted students with educational resources across multiple technical subjects.',
+      'Organised study sessions to support collaborative and self-directed learning.',
+    ],
+    tags: ['Mentoring', 'Education', 'Volunteering'],
   },
 ]
 
@@ -218,7 +231,7 @@ function JourneySection() {
                     </p>
                   </div>
                 </div>
-                <a
+                {/* <a
                   href={cert.link}
                   target="_blank"
                   rel="noreferrer"
@@ -226,7 +239,7 @@ function JourneySection() {
                   className={`mt-0.5 shrink-0 ${theme.textMuted} transition hover:${theme.textSecondary}`}
                 >
                   <ExternalLink size={14} />
-                </a>
+                </a> */}
               </div>
             </motion.article>
           ))}

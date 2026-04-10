@@ -43,9 +43,11 @@ function MagneticWrap({ children, className = '', strength = 12 }) {
 
 /* ─── Contact data ─────────────────────────────────────────────────── */
 const contactPills = [
-  { icon: MapPin, label: 'Amman, Jordan',                 href: 'https://maps.google.com/?q=Amman,+Jordan', external: true  },
-  { icon: Mail,   label: 'abdalrahmanadnan209@gmail.com', href: 'mailto:abdalrahmanadnan209@gmail.com',     external: false },
-  { icon: Phone,  label: '+962-791044738',                href: 'tel:+962791044738',                        external: false },
+  { icon: MapPin, label: 'Amman, Jordan',                 href: 'https://maps.google.com/?q=Amman,+Jordan',          external: true  },
+  { icon: MapPin, label: 'Riyadh, Saudi Arabia',          href: 'https://maps.google.com/?q=Riyadh,+Saudi+Arabia',   external: true  },
+  { icon: Mail,   label: 'abdalrahmanadnan209@gmail.com', href: 'mailto:abdalrahmanadnan209@gmail.com',               external: false },
+  { icon: Phone,  label: '+962-791044738',                href: 'tel:+962791044738',                                  external: false },
+  { icon: Phone,  label: '+966-556649569',                href: 'tel:+966556649569',                                  external: false },
 ]
 const contactIcons = [
   { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-linkedin' },

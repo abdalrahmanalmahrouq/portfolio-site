@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Github, ExternalLink } from 'lucide-react'
 import theme from '../theme'
+import medicinaLogo from '../assets/medicina-logo.png'
 
 /* ─── Project data ─────────────────────────────────────────────────── */
 const projects = [
@@ -11,8 +12,9 @@ const projects = [
     description:
       'A multi-tenant web platform connecting clinics, doctors, and patients. Built a full React frontend with a modular Laravel PHP backend, containerised via Docker for seamless deployment across environments.',
     stack: ['React.js', 'Laravel PHP', 'Docker', 'REST APIs', 'MySQL'],
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/abdalrahmanalmahrouq/graduation-project',
+    demo: null,
+    logo: medicinaLogo,
     span: 'md:col-span-8',
     featured: true,
   },
@@ -23,7 +25,7 @@ const projects = [
     description:
       'Built a Convolutional Neural Network with TensorFlow & Keras to classify images into binary classes with optimised training pipelines.',
     stack: ['Python', 'TensorFlow', 'Keras'],
-    github: '#',
+    github: 'https://github.com/abdalrahmanalmahrouq/cnn_happy_unhappy',
     demo: null,
     span: 'md:col-span-4',
     featured: false,
@@ -35,7 +37,7 @@ const projects = [
     description:
       'Feature-engineered a Kaggle dataset and applied traditional ML alongside ANN deep learning to predict income brackets.',
     stack: ['Pandas', 'NumPy', 'TensorFlow Keras'],
-    github: '#',
+    github: 'https://github.com/abdalrahmanalmahrouq/Income_dataSet',
     demo: null,
     span: 'md:col-span-4',
     featured: false,
@@ -47,7 +49,7 @@ const projects = [
     description:
       'Developed regression models on Kaggle data with end-to-end preprocessing, feature engineering, and Scikit-learn pipelines.',
     stack: ['Scikit-learn', 'Linear Regression', 'Random Forest'],
-    github: '#',
+    github: 'https://github.com/abdalrahmanalmahrouq/Student-Dataset',
     demo: null,
     span: 'md:col-span-4',
     featured: false,
@@ -129,9 +131,17 @@ function FeaturedCard({ project }) {
         {/* Right — decorative mesh panel */}
         <div className="hidden lg:flex items-center justify-center">
           <div className={`h-48 w-full rounded-2xl bg-linear-to-br ${theme.cardMesh} border ${theme.cardBorder} flex items-center justify-center`}>
-            <span className={`bg-linear-to-r ${theme.headingFrom} ${theme.headingVia} ${theme.headingTo} bg-clip-text text-5xl font-black text-transparent opacity-30`}>
-              {project.title[0]}
-            </span>
+            {project.logo ? (
+              <img
+                src={project.logo}
+                alt={`${project.title} logo`}
+                className="h-70 w-auto object-contain"
+              />
+            ) : (
+              <span className={`bg-linear-to-r ${theme.headingFrom} ${theme.headingVia} ${theme.headingTo} bg-clip-text text-5xl font-black text-transparent opacity-30`}>
+                {project.title[0]}
+              </span>
+            )}
           </div>
         </div>
       </div>
@@ -148,10 +158,10 @@ function SmallCard({ project }) {
       whileInView="show"
       whileHover="hover"
       viewport={{ once: true }}
-      className={`group relative overflow-hidden rounded-2xl border ${theme.cardBorder} ${theme.cardBg} p-6 backdrop-blur-md transition-all duration-500 ${theme.cardHoverBorder} ${theme.cardGlow} ${project.span}`}
+      className={`group relative self-start overflow-hidden rounded-2xl border ${theme.cardBorder} ${theme.cardBg} p-6 backdrop-blur-md transition-all duration-500 ${theme.cardHoverBorder} ${theme.cardGlow} ${project.span}`}
     >
 
-      <div className="relative z-10 flex h-full flex-col justify-between gap-4">
+      <div className="relative z-10 flex flex-col gap-4">
         <div>
           <h3 className="text-xl font-bold leading-tight">
             <span className={`bg-linear-to-r ${theme.headingFrom} ${theme.headingVia} ${theme.headingTo} bg-clip-text text-transparent`}>

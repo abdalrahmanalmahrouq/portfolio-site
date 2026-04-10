@@ -5,14 +5,17 @@ const webSkills = [
   { label: 'React.js' }, { label: 'Laravel PHP' }, { label: 'JavaScript' },
   { label: 'SQL' }, { label: 'Docker' }, { label: 'GitHub' },
   { label: 'VS Code' }, { label: 'Ubuntu Linux' }, { label: 'REST APIs' },
-  { label: 'Java' }, { label: 'C++' },
+  { label: 'Java' }, { label: 'C++' }, { label: 'MySQL' },
+  { label: 'Tailwind CSS' }, { label: 'React-Bootstrap' },
+  { label: 'n8n' }, { label: 'OpenRouter' }, { label: 'Cursor' },
 ]
 
 const aiSkills = [
   { label: 'Python' }, { label: 'TensorFlow' }, { label: 'Keras' },
   { label: 'Scikit-learn' }, { label: 'Pandas' }, { label: 'NumPy' },
   { label: 'Matplotlib' }, { label: 'Deep Learning' }, { label: 'CNN' },
-  { label: 'ANN' }, { label: 'Data Science' },
+  { label: 'ANN' }, { label: 'Data Science' }, { label: 'Machine Learning' },
+  { label: 'LLMs' }, { label: 'LangChain' },
 ]
 
 function MarqueeRow({ items, reverse = false }) {

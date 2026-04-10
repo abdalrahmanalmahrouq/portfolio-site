@@ -6,4 +6,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: "/portfolio-site/",
   plugins: [react(), tailwindcss()],
+  define: {
+    // Polyfill Node.js `global` for browser — required by some 3D/spline deps
+    global: 'globalThis',
+  },
 })
