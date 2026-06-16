@@ -25,7 +25,7 @@ const projects = [
     subtitle: 'Autonomous AI-Powered News Digest Pipeline',
     description: 'Built a production-grade multi-agent pipeline using LangGraph with 8 typed nodes — including a nested ReAct agent for article summarization, a web-search-powered claim verifier, and a conditional retry edge. Deployed on AWS EC2 behind Cloudflare with HTTPS via Caddy, containerized with Docker and automated through GitHub Actions CI/CD. Achieves ~4.5× speedup via asyncio.gather concurrency, with full observability via LangSmith tracing and loguru structured logging.',
     stack: ['LangGraph', 'LangChain', 'FastAPI', 'Python', 'Docker', 'AWS EC2', 'OpenRouter', 'LangSmith', 'Cloudflare'],
-    github: 'github: https://github.com/abdalrahmanalmahrouq/tech-news-agent,',
+    github: 'https://github.com/abdalrahmanalmahrouq/tech-news-agent',
     demo: 'https://technewsagent.indevs.in/',
     span: 'md:col-span-4',
     featured: false,
@@ -141,7 +141,7 @@ function FeaturedCard({ project }) {
           </div>
 
           <motion.div  className="flex gap-3">
-            <a href={project.github}
+            <a href={project.github} target='_blank'
               className={`inline-flex items-center gap-2 rounded-full border ${theme.cardBorder} ${theme.cardBg} px-4 py-2 text-sm ${theme.textSecondary} transition hover:opacity-80`}>
 
               <Github size={14} /> GitHub
@@ -222,7 +222,7 @@ function SmallCard({ project }) {
 
         <motion.div  className="flex gap-2">
           {project.github && (
-            <a href={project.github}
+            <a href={project.github} target='_blank'
               className={`inline-flex items-center gap-1.5 rounded-full border ${theme.cardBorder} ${theme.cardBg} px-3 py-1.5 text-xs ${theme.textSecondary} transition hover:opacity-80`}>
               <Github size={12} /> GitHub
             </a>
@@ -282,13 +282,13 @@ function MediumCard({ project }) {
 
         <motion.div  className="flex gap-2">
           {project.github && (
-            <a href={project.github}
+            <a href={project.github} target='_blank'
               className={`inline-flex items-center gap-2 rounded-full border ${theme.cardBorder} ${theme.cardBg} px-4 py-2 text-sm ${theme.textSecondary} transition hover:opacity-80`}>
               <Github size={13} /> GitHub
             </a>
           )}
           {project.demo && (
-            <a href={project.demo}
+            <a href={project.demo} target='_blank'
               className={`inline-flex items-center gap-2 rounded-full border ${theme.labelBorder} ${theme.labelBg} px-4 py-2 text-sm ${theme.labelText} transition hover:opacity-80`}>
               <ExternalLink size={13} /> Live Demo
             </a>
