@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 import Spline from '@splinetool/react-spline'
 import { Code2, BrainCircuit, Github, Linkedin, Mail, MapPin, Phone, Database, FlaskConical, Globe, Cpu } from 'lucide-react'
-import personalImage from '../assets/personalpic.jpeg'
+import personalImage from '../assets/gradpic.png'
 import theme from '../theme'
 
 /* ─── Blur-reveal name animation ──────────────────────────────────── */
